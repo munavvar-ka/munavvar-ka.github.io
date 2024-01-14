@@ -14,7 +14,7 @@ window.onload = function () {
   const experience = document.getElementById("experience");
   const elements = document.querySelectorAll(".screen-height");
   const resizeElements = () => {
-    const height = document.documentElement.clientHeight - 20;
+    const height = document.documentElement.clientHeight - 40;
     elements.forEach((element) => {
       element.style.height = `${height}px`;
     });

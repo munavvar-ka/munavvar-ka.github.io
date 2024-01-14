@@ -3,6 +3,7 @@ html {
 }
 body {
   margin: 0;
+  background-color: #ddd;
 }
 .main-section {
   height: 100vh;
@@ -11,11 +12,11 @@ body {
       position: fixed;
       float: left;
       width: 300px;
-      background-color: #cfedff;
+      background-color: #fff;
       overflow-y: auto;
       overflow-x: hidden;
       border-radius: 10px;
-      margin: 10px 20px;
+      margin: 20px 20px;
       .details {
         text-align: center;
         padding: 20px;
@@ -43,10 +44,14 @@ body {
     .content {
       float: right;
       width: calc(100% - 340px);
-      margin: 10px;
+      margin-left: 20px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-right: 5px;
       .welcome {
         display: flex;
         background: url("../images/image.jpg") no-repeat center;
+        background-size: cover;
         overflow: hidden;
         border-radius: 10px;
         color: #fff;
@@ -60,15 +65,60 @@ body {
           border-radius: 5px;
         }
       }
-      .sections {
-        margin-top: 20px;
+      .screen-height {
+        display: flex;
+        margin-bottom: 15px;
+      }
+      .section {
+        border-radius: 10px;
         padding: 20px 40px;
-        &#my-tools {
+        margin: auto;
+        background-color: #fff;
+        min-height: 50%;
+        text-align: center;
+      }
+      .my-tools {
+        .tools-list {
+          img {
+            height: 120px;
+            width: 120px;
+            margin: 30px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 912px) {
+  .main-section {
+    .container {
+      .side-nav {
+        display: none;
+      }
+      .content {
+        float: none;
+        width: 100%;
+        margin: 0 !important;
+        .screen-height {
+          margin: 0;
+          &.others {
+            height: unset !important;
+            margin-top: 10px;
+            margin-bottom: 10px;
+          }
+        }
+        .welcome {
+          border-radius: 0;
+        }
+        .section {
+          border-radius: 0;
+        }
+        .my-tools {
           .tools-list {
             img {
-              height: 120px;
-              width: 120px;
-              margin: 30px;
+              height: 60px;
+              width: 60px;
+              margin: 15px;
             }
           }
         }
